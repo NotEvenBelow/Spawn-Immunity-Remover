@@ -6,10 +6,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/**
- * Force no spawn/join invulnerability for players.
- * Runs every tick on the server player.
- */
 @Mixin(ServerPlayerEntity.class)
 public abstract class ServerPlayerNoSpawnInvulMixin {
     @Inject(method = "tick", at = @At("HEAD"))
