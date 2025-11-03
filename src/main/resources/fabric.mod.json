@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "spawnimmunityremover",
+  "version": "1.0.0",
+  "name": "Spawn Immunity Remover",
+  "description": "Removes spawn invulnerability for players.",
+  "authors": [
+    "NotEvenBelow"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/spawn-immunity-remover",
+    "issues": "https://github.com/NotEvenBelow/Spawn-Immunity-Remover/issues"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.foltz.spawnimmunityremover.SpawnImmunityRemover"
+    ]
+  },
+  "mixins": [
+    "spawnimmunityremover.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
+}
