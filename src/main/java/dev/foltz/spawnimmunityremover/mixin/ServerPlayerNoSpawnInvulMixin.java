@@ -16,12 +16,9 @@ public abstract class ServerPlayerNoSpawnInvulMixin {
     private void simr$clearJoinInvul(CallbackInfo ci) {
         ServerPlayerEntity self = (ServerPlayerEntity)(Object)this;
 
-        // zero the "recently joined" invulnerability window
         ((ServerPlayerEntityAccessor) self).setJoinInvulnerabilityTicks(0);
 
-        // just in case: ensure flags/cooldowns are off right now
         self.setInvulnerable(false);
         self.timeUntilRegen = 0;
-        // NOTE: don't touch fallDistance — letting it accumulate is what we want.
     }
 }
